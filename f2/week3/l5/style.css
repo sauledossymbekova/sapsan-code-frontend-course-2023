@@ -1,0 +1,40 @@
+/* body {
+    color: red;
+}
+
+.container{
+    width: 50%;
+    height: 50%;
+    border: 5px solid black;
+}
+
+.first {
+    border: 3px solid red;
+}
+
+.second {
+    border: 3px solid blue;
+} */
+
+ul{
+    color: green;
+    max-width: 50%;
+}
+
+a {
+    color: inherit;
+}
+
+div{
+
+    margin: 10px 10px 10px 10px;
+    
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin: 20px 10px 5px;
+
+    
+    margin: 20px 10px;
+}

@@ -1,0 +1,169 @@
+/* последовательность стилей */
+
+/* p {
+    color: red;
+}
+
+p {
+    color: blue;
+} */
+
+/* default browser < custom dev styles */
+/* * {
+    color: violet;
+} */
+/* чем уже или специфичнее селектор тем он приоритетнее */
+
+/* p {
+    color: red;
+} */
+/* если селекторы весят одинаково то применяется тот что последний */
+/* p {
+    color: black;
+} */
+
+/* не каждый p может иметь класс поэтому класс специфичнее чем селектор по тегу */
+/* tag selector < class */
+/* .my-class {
+    color: yellow;
+} */
+
+/* id используется в исключительных случаях чем класс */
+/* id > class */
+/* #my-id{
+    color: blue;
+} */
+/* вывод: */
+/* global(*) < по тегу < класс < id */
+
+/* Обычно с какой последов-ю пишется стили */
+/* *{}
+html{}
+
+h1{}
+h2{}
+img {}
+
+.cv{
+
+}
+
+.skills{
+
+}
+.experience{
+
+}
+.info{
+
+}
+
+#unique{} */
+
+/* Selector по аттрибутам */
+
+/* если в параграфе есть атрибут класс который точно равен значению "parag" */
+
+/* p[class="parag"]{
+    color: red;
+} */
+
+/* если в параграфе есть атрибут класс(не важно какого значения) */
+/* p[class]{
+    color: red;
+} */
+
+/* p[class~="parag"]{
+    color: red;
+} */
+
+/* Надо написать 
+общий для всех инпутов у которого есть аттрибут тип 
+особенный стиль для инпута у которого тип равен тексту 
+*/
+
+/* input[type] {
+  background-color: #3cbc8d;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+} */
+
+/* form
+        /  \
+    input   div
+            /\
+        input input  */
+
+/* для всех кто находится внутри */
+/* form input {
+    background-color: #3cbc8d;
+} */
+
+/* для прямых потомков */
+/* form > input {
+    background-color: aqua;;
+} */
+
+/* .parag {
+    color: red;
+} */
+
+/* id 100 
+class 10 */
+
+/* 10+10 = 20 */
+/* .parag.myClass{
+    color: red !important;
+} */
+
+/* 100 + 10 =110 */
+/* .parag#myId{
+    color: blue;
+} */
+
+/* div {
+    color: blue;
+    background-color: aqua;
+} */
+
+/* .first {
+  width: 200px;
+  height: 200px;
+  border: 2px solid blue;
+}
+
+.second{
+    border: 3px solid red;
+}
+
+ul {
+    color: green;
+}
+
+a {
+    color: inherit;
+} */
+
+div {
+    width: 100px;
+    height: 100px;
+    border: 2px solid blue;
+
+    /* margin: 100px 50px 25px 25px; */
+
+    /* margin-top: 100px;
+    margin-right: 100px;
+    margin-bottom: 100px;
+    margin-left: 100px; */
+/* 
+    padding-top: 100px;
+    padding-right: 100px;
+    padding-bottom: 100px;
+    padding-left: 50px; */
+    text-align: center;
+}

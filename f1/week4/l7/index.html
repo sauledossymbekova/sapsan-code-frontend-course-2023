@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Flexbox wrap 0 — children overflowing</title>
+    <style>
+      .parent {
+        display: flex;
+        height: 300px; /* Or whatever */
+        background-color: bisque;
+      }
+
+      .child {
+        width: 100px; /* Or whatever */
+        height: 100px; /* Or whatever */
+        margin: auto; /* Magic! */
+        background-color: aqua;
+      }
+
+
+      @media screen and (max-width: 420px) {
+
+        .child{
+            background-color: red;
+        }
+
+      }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Sample flexbox example</h1>
+    </header>
+    <div class="parent">
+      <div class="child">my child</div>
+    </div>
+  </body>
+</html>

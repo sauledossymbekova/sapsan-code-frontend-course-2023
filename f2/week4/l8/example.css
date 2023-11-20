@@ -1,0 +1,55 @@
+// div {
+//     display: flex;
+// }
+
+// div h1{
+//     color: red;
+// }
+
+// div p {
+
+// }
+
+// div a {
+    
+// }
+
+
+div {
+
+    display: flex;
+
+    h1 {
+        color: red;
+    }
+
+    p {
+
+    }
+
+    a{
+
+    }
+}
+
+div {
+    h1 {
+      
+    }
+  }
+  
+  // упрощение вложенности
+  ul {
+  
+    li {
+      color: red;
+    }
+  
+    p {
+      text-decoration: underline;
+    }
+  
+    a {
+      list-style: none;
+    }
+  }

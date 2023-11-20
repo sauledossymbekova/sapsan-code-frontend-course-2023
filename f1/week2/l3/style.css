@@ -1,0 +1,81 @@
+/* p,
+li {
+  color: blue;
+} */
+
+/* глобальный селектор */
+* {
+  /* цвет фона */
+  background-color: aliceblue;
+}
+
+/* тег селектор */
+h1 {
+  /* цвет текста */
+  color: red;
+  /* расположение текста в линии */
+  text-align: center;
+}
+
+/* класс селектор */
+/* .special {
+  color: orange;
+} */
+
+/* id селектор */
+/* #blue {
+    color: blue;
+} */
+
+/* « для любого элемента li, который имеет класс special» */
+/* li.special {
+    color: orange
+} */
+
+/* отношение родительского к ребенку
+ пишется через пробел между названиями тегов */
+
+/* em внутри параграфа */
+p em {
+  color: red;
+}
+
+/* cсылки которые вы посещали */
+a:visited {
+  color: orange;
+}
+
+/* ссылки на которую вы наводите */
+a:hover {
+  color: green;
+}
+
+button:hover {
+  background-color: aqua;
+  color: white;
+}
+
+
+/* id > class > tag */
+
+.blue {
+  color: blue;
+}
+
+p {
+  color: black;
+}
+
+#red {
+    color: red;
+}
+
+/*  */
+
+h2 {
+    color: black;
+}
+
+h2 {
+    color: blueviolet;
+}

@@ -1,0 +1,69 @@
+/* #my-id {
+    color: red;
+}
+
+.my-class {
+    color: blue;
+}
+
+p {
+    color: orange;
+}
+
+* {
+    color: black;
+} */
+
+/* selectors приоритетность */
+/* id > class > tag name > *(глобальный селектор) */
+
+/* Селектор по аттрибутам */
+/* p[class] {
+    color: red;
+} */
+
+/* p[class~="special"] {
+  color: red;
+}
+
+input[type="text"] {
+  background-color: aquamarine;
+} */
+
+/* pseudoelement */
+/* p::first-line {
+    color: red;
+} */
+
+/* span {
+    color: red;
+} */
+
+/* comnibators, разница пробела от > */
+/* form input {
+  background-color: aqua;
+} */
+
+/* form > input {
+    background-color: blue;
+} */
+
+
+.box {
+    width: 100px;
+    height: 100px;
+
+    padding: 10px;
+    margin-bottom: 30px;
+    border: 5px solid red;
+}
+
+.second {
+    width: 100px;
+    height: 100px;
+
+    padding: 10px;
+    margin-top: 50px;
+    border: 5px solid red;
+}
+/* margin collapsing */

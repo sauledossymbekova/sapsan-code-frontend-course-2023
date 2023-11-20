@@ -1,0 +1,68 @@
+/* #fee36e; f16775 373E98 ceb92c */
+// SASS
+// Responsive: flex, no pixels, beauty
+
+
+@use 'navigation';
+@use 'texts';
+@use 'variables';
+
+body {
+  margin: 0;
+  background-color: $main-color;
+
+  font-family: "Roboto", sans-serif;
+}
+
+.resume {
+  display: flex;
+  flex-direction: row;
+  background-color: #fee36e;
+
+  margin: 24px;
+
+  .left-side {
+    flex: 40%;
+
+    .profile {
+      display: flex;
+
+      .photo {
+        margin: auto;
+        width: 160px;
+        border-radius: 50%;
+      }
+    }
+
+    .details {
+      text-align: center;
+    }
+  }
+
+  .right-side {
+    flex: 60%;
+  }
+}
+
+.section {
+  .title {
+    background-color: #fee36e;
+
+    display: inline;
+    text-transform: uppercase;
+    padding: 5px;
+    border: 1px solid black;
+  }
+}
+
+@media screen and (max-width: base.$phone-width) {
+  .resume {
+    flex-direction: column;
+    margin: 10px;
+  }
+
+  /* картинка для моб устройств */
+  .photo {
+    width: 100px;
+  }
+}

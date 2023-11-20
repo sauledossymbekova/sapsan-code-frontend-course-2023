@@ -1,0 +1,62 @@
+/* смотрит на родителя */
+/* 32*0.5 = 16px */
+/* p {
+    font-size: 32px;
+}
+span {
+    font-size: 2em;
+}
+
+
+.el1{
+    font-size: 16px;
+}
+
+.el2{
+    font-size: 2em;
+}
+
+.el3{
+    font-size: 1.5em;
+}
+
+.el4{
+    font-size: 0.5;
+} */
+
+/* html {
+    font-size: 20px;
+} */
+
+/* 20px */
+h1{
+    font-size: 1rem;
+}
+
+/* 10px */
+p{
+    font-family: 'Roboto', sans-serif;
+
+    /* font-size: 0.5rem; */
+    /* font-weight: 900;
+    font-style: italic;
+    text-transform: lowercase; */
+    /* text-decoration: underline line-through; */
+    /* Text-shadow: 10px 10px 10px black; */
+    /* word-spacing: 100px; */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.container {
+    border: 3px solid black;
+    display: flex;
+    flex-direction: row;
+}
+
+.box {
+    border: 2px solid red;
+}

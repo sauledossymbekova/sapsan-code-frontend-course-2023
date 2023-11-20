@@ -1,0 +1,60 @@
+@use "var";
+@use "nav";
+@use "mixins";
+@use "lib";
+
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  background-color: var.$back-color;
+}
+
+.resume {
+  @include mixins.flex(row);
+
+  margin-top: 24px;
+  // display: flex;
+
+  .left-side {
+    flex: 40%;
+
+    .profile {
+      display: flex;
+
+      img {
+        width: 180px;
+        margin: auto;
+        border-radius: 100%;
+      }
+    }
+
+    .details {
+      text-align: center;
+    }
+  }
+
+  .right-side {
+    flex: 60%;
+  }
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+  .resume {
+    flex-direction: column;
+
+    div {
+      flex: 100%;
+    }
+  }
+}

@@ -1,0 +1,98 @@
+@charset "UTF-8";
+/* #fee36e; f16775 373E98 ceb92c */
+.navigation {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  background: deepskyblue;
+}
+.navigation a {
+  scroll-behavior: smooth;
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: white;
+}
+.navigation a:hover {
+  background: #1565c0;
+}
+
+@media screen and (max-width: 600px) {
+  .navigation {
+    flex-flow: column wrap;
+    padding: 0;
+  }
+  .navigation a {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+}
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+.description {
+  font-size: 1rem;
+}
+
+body {
+  margin: 0;
+  background-color: #fee36e;
+  font-family: "Roboto", sans-serif;
+}
+
+.resume {
+  display: flex;
+  flex-direction: row;
+  background-color: #fee36e;
+  margin: 24px;
+}
+.resume .left-side {
+  flex: 40%;
+}
+.resume .left-side .profile {
+  display: flex;
+}
+.resume .left-side .profile .photo {
+  margin: auto;
+  width: 160px;
+  border-radius: 50%;
+}
+.resume .left-side .details {
+  text-align: center;
+}
+.resume .right-side {
+  flex: 60%;
+}
+
+.section .title {
+  background-color: #fee36e;
+  display: inline;
+  text-transform: uppercase;
+  padding: 5px;
+  border: 1px solid black;
+}
+
+@media screen and (max-width: 640px) {
+  .resume {
+    flex-direction: column;
+    margin: 10px;
+  }
+  /* картинка для моб устройств */
+  .photo {
+    width: 100px;
+  }
+}/*# sourceMappingURL=style.css.map */

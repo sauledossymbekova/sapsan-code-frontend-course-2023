@@ -1,0 +1,65 @@
+/* h1,p {
+    color: red;
+    
+    font-size: 10px; 
+} */
+/* за размер шрифта font-size*/
+
+/* * {
+    background-color: aqua;
+}
+
+h1 {
+    color: red;
+}
+
+p, li {
+    color: blue;
+} */
+
+/* .special{
+    color: orange;
+} */
+
+/* .listItem {
+    color: blue;
+} */
+
+/* id селектор используется для исключительных случаев */
+/* и имеет больший вес чем класс */
+/* #warning {
+    color: red;
+} */
+
+/* приоритезация селекторов */
+/* id > class > tag > global */
+/* .myImage {
+    width: 200px;
+    height: 200px;
+}
+
+#unique {
+    width: 400px;
+    height: 400px;
+} */
+
+/* параграф который имеет класс special */
+/* p.special {
+    color: orange;
+} */
+
+/* strong который ннаходится внутри параграфа */
+/* p strong {
+    color: orange;
+} */
+
+/* li em {
+    color: red;
+} */
+
+a:visited {
+    color: grey;
+}
+a:hover {
+    color: green;
+}

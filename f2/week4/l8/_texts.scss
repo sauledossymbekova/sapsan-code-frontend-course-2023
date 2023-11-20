@@ -1,0 +1,31 @@
+.title {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.subtitle{
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+.description {
+    font-size: 1rem;
+}
+
+
+@media screen and (max-width: base.$phone-width) {
+    .title {
+        font-size: 1.75rem;
+        font-weight: 500;
+    }
+    
+    .subtitle{
+        font-size: 1.25rem;
+        font-style: italic;
+    }
+    
+    .description {
+        font-size: 1rem;
+    }
+  }
+  
