@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="d-flex flex-wrap justify-content-around align-items-start p-2">
+      <!-- Первое задание -->
+      <div class="d-flex flex-column p-2 mb-3" style="max-width: 360px">
+        <p><mark>Task 1:</mark></p>
+
+        <input
+          class="form-control mb-2"
+          placeholder="Введите число..."
+          type="text"
+          id="input1-1"
+        />
+        <input
+          class="form-control mb-2"
+          placeholder="Введите число..."
+          type="text"
+          id="input1-2"
+        />
+        <button class="mb-2 btn btn-success" id="sum">SUM</button>
+        <div class="d-inline-flex">
+          <p>Результат:</p>
+          <p id="result1"></p>
+        </div>
+      </div>
+      <!-- Второе задание -->
+      <div class="d-flex flex-column p-2 mb-3" style="max-width: 360px">
+        <p><mark>Task 2:</mark></p>
+
+        <input
+          class="form-control mb-2"
+          placeholder="Введите число..."
+          type="number"
+          id="input2-1"
+        />
+        <button class="mb-2 btn btn-primary" id="numberCheck">
+          Number Check
+        </button>
+        <div class="d-inline-flex">
+          <p>Результат:</p>
+          <p id="result2"></p>
+        </div>
+      </div>
+      <!-- Третье задание -->
+      <div class="d-flex flex-column p-2 mb-3" style="max-width: 360px">
+        <p><mark>Task 3:</mark></p>
+
+        <input
+          class="form-control mb-2"
+          placeholder="Введите число..."
+          type="number"
+          id="input3-1"
+        />
+        <button class="mb-2 btn btn-secondary" id="evenCheck">
+          Even Check
+        </button>
+        <div class="d-flex">
+          <p>Результат:</p>
+          <p id="result3"></p>
+        </div>
+      </div>
+      <!-- Четвертое задание -->
+      <div class="d-flex flex-column p-2 mb-3" style="max-width: 360px">
+        <p><mark>Task 4:</mark></p>
+
+        <input
+          class="form-control mb-2"
+          placeholder="Введите число..."
+          type="text"
+          id="input4-1"
+        />
+        <input
+          class="form-control mb-2"
+          placeholder="Введите число..."
+          type="text"
+          id="input4-2"
+        />
+        <button class="mb-2 btn btn-info" id="calculate">Calculate</button>
+        <div class="d-flex flex-column">
+          <div class="d-inline-flex">
+            <p>Сумма :</p>
+            <p id="result4-1"></p>
+          </div>
+          <div class="d-inline-flex">
+            <p>Вычитание :</p>
+            <p id="result4-2"></p>
+          </div>
+          <div class="d-inline-flex">
+            <p>Умножение :</p>
+            <p id="result4-3"></p>
+          </div>
+          <div class="d-inline-flex">
+            <p>Деление :</p>
+            <p id="result4-4"></p>
+          </div>
+        </div>
+      </div>
+      <!-- Пятое задание -->
+      <div class="d-flex flex-column p-2 mb-3" style="max-width: 400px">
+        <p><mark>Task 5:</mark></p>
+        <input
+          class="form-control mb-2"
+          placeholder="Введите рост..."
+          type="text"
+          id="input5-1"
+        />
+        <input
+          class="form-control mb-2"
+          placeholder="Введите окружность талии..."
+          type="text"
+          id="input5-2"
+        />
+        <input
+          class="form-control"
+          placeholder="Введите гендер..."
+          type="text"
+          id="input5-3"
+        />
+        <div class="form-text mb-2" id="basic-addon4">
+          Введите гендер (М или Ж)
+        </div>
+
+        <button class="mb-2 btn btn-warning" id="getFat">
+          Получить % жира
+        </button>
+        <div class="d-inline-flex">
+          <p>% жира: </p>
+          <p id="result5"></p>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
