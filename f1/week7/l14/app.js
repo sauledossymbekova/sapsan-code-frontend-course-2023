@@ -117,7 +117,23 @@ console.log(arr);
 
 // console.log(info.includes("Saule")) // true
 
-let list = ["Алдабергенов БАЛАБАЙ","Murat Nurassyl", "Aбдыраимова Бибигуль", "Асубаева Еркежан", "Курманов Талгат","Дакеева Мадина","Матенов Нургазы Асенбаевич","Ахметжанов Айдархан"]
+let list = ["Алдабергенов Балабай","Murat Nurassyl", "Aбдыраимова Бибигуль", "Асубаева Еркежан", "Курманов Талгат","Дакеева Мадина","Матенов Нургазы Асенбаевич","Ахметжанов Айдархан"]
+let paragraph = document.createElement("p")
+paragraph.textContent = `Мой массив: ${list}`
+paragraph.style.background = "beige"
+document.body.append(paragraph)
+
+let userValue = document.querySelector(".userValue")
+let includeBtn = document.querySelector('.includes')
+let sliceBtn = document.querySelector('.slice')
+
+includeBtn.addEventListener('click', function(){
+    let result = list.includes(userValue.value)
+    let paragraph = document.createElement("p")
+    paragraph.textContent = result ? `${userValue.value} есть в списке` : "этого человека нет в списке" 
+    result ? paragraph.style.color = "green" :  paragraph.style.color = "red"
+    document.body.append(paragraph)
+})
 
 // console.log(list.includes("Балабай")) // false
 // console.log(list.includes("Алдабергенов Балабай")) // true
