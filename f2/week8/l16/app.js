@@ -1,80 +1,92 @@
 // ()
 // built in functions, browser API
 
-/* обьявление функции, описание, определение, defining
+/* обьявление функции, описание, определение, defining 
 function greeting(){
     alert("hello");
+    // что делает функция
 }
 
 greeting() // calling invoking
 */
 
-/* custom functions
+/* custom functions 
 function myFunction() {
-    alert("hello");
-  }
-  
-  myFunction();
-*/
+  alert("hello");
+}
+
+myFunction();*/
 
 // console.error("WARNING!!!!")
 
-/* вызов функции внутри другой
+/* вызов функции внутри другой 
 function random(number) {
     return Math.floor(Math.random() * number);
-  }*/
-// метод
-/* params, arguments Math.random() myText.replace("Я", "Ты");
-// дефолтные параметры
+  }
 
-function greeting(firstName = "my friend"){
+function greeting(){
+    Math.random()
+    random()
+    myFunction()
+    console.log("Hello")
+}
+
+greeting() // greeting() => console.log()
+*/
+
+// метод - функция обьекта
+
+/* params, arguments Math.random() myText.replace("Я", "Ты");
+
+function greeting(firstName){
     console.log(`Hello, ${firstName}`)
 }
 
+greeting("Saule")
+*/
 
-let myName = "Saule"
+/* дефолтные параметры
 
-greeting(myName)
-greeting()
-greeting()
+function greeting(firstName = "my friend", lastName = " ", age = 0){
+    if(lastName===" "){
+        console.log(`Hello, ${firstName}`)
+    } else if(lastName !== " "){
+        console.log(`Hello, ${firstName} ${lastName}`)
+    }
+
+
+}
+
+greeting("Saule")
+// greeting()
+// greeting()
+// greeting()
 */
 
 /* опциональные параметры join
 let arr = ["a", "b", "c", "d"]
+
 console.log(arr.join())
-console.log(arr.join("-"))
+console.log(arr.join(" "))
 console.log(arr.join("/"))
+console.log(arr.join("&"))
 */
 
 /*анонимные функции: пример с addeventListener
 
-// let myButton = document.querySelector(".button");
+let myButton = document.querySelector(".button");
 
-// myButton.addEventListener('click', function(){
-//     alert("Hello my friend!")
-// })
+// function greeting(){
+//     console.log("Hello")
+// }
 
-// myButton.addEventListener('click', () =>
-//     alert("Hello my friend!")
-// )
-*/
-/*function(){
-    alert("Hello my friend!")
-}
+myButton.addEventListener("click", function (){
+    console.log("Hello")
+})
 
-() => { alert('Hello')}
-
-function(){
-    return 'Hello'
-}
-
-()=> 'hello'*/
-
-/*function sum(a,b){
-    console.log(a + b)
-}
-
-let c = sum(10,10) // c=20
+myButton.addEventListener("click", () => {
+    console.log("Hello")
+})
 */
 
 // myButton.onclick = function () {
@@ -84,7 +96,34 @@ let c = sum(10,10) // c=20
 //   };
 
 // стрелочные функции -  function(variable) (variable) =>:
-// return values: substr, replace
+
+/* Синтаксис стрелочных функции
+function (a){
+    console.log(a)
+}
+
+(a) => {
+    console.log(a)
+}
+
+function (b){
+    return b*b
+}
+
+(b) => b*b
+(b) => (b*b)
+
+function (c){
+    let result = c+ 10*2 - 2*c
+
+    return result
+}
+
+(c) => {
+    let result = c+ 10*2 - 2*c
+    return result
+}
+*/
 
 /* задание переписать функцию дабл через стрелочные функции 
 function double(number) {
@@ -101,74 +140,103 @@ const doubled = numbers.map((num) => num * 2);
 console.log(numbers, doubled);
 */
 
-/* Пример с клавиатурой 
-const textBox = document.querySelector("#textBox");
-const output = document.querySelector("#output");
+// const numbers = [5, 2, 7, 6];
+// 10
+// 4
+// 14
+// 12
 
-textBox.addEventListener("keypress", (event) => {
-  output.textContent = `You pressed "${event.key}".`;
+// const doubled = numbers.map(function(number) {
+//   return number * 2;
+// });
+
+// const doubled = numbers.map((number) => number * 2);
+// console.log(numbers, doubled)
+
+// const doubled = numbers.map((number) => {
+//     console.log(number * 2)
+// });
+// console.log(doubled)
+
+// return values: substr, replace
+
+/* Виды функции
+// функция которая просто что-то выполняет
+function sum(a,b){
+    console.log(a + b)
+}
+
+sum(10,10)
+
+// функция которая возвращает что-то
+function minus(a,b){
+    return a - b
+}
+
+let result = minus(100, 99) // result = 1
+
+console.log(result)
+*/
+
+
+/* Особенности Map
+
+let numbers = [1, 2, 3, 4, 5];
+
+numbers.map((num) => num)
+
+let newArray = numbers.map(function (num){
+    return num
+})
+
+numbers.map((num) => {
+  console.log(num);
 });
-*/
 
-/* Область видимости Scope
-
-// let a = "Saule"
-
-// function sum(){
-//     let a = 10
-
-//     console.log("а внутри функции",a)
-// }
-// sum()
-
-// console.log("а вне функции",a)
-*/
-
-/* Пример с несколькими скриптами*/
-
-/* Пример с переменными и функциями 
-const x = 1;
-function a() {
-    const y = 2;
-    console.log(x);
-  }
-  
-  function b() {
-    const z = 3;
-    console.log(x);
-  }
-*/
-
-// append child, remove child, innerhtml
-
-let input = document.querySelector(".input");
-let result = document.querySelector("div");
-console.log(input)
-
-input.addEventListener("change", (event) => {
-  console.log('You typed')
-  result.textContent = `You typed ${event.target.value}`;
+let newArray = numbers.map(function (num) {
+   console.log(num);
 });
 
-// let button = document.querySelector(".button")
+console.log(newArray);
 
-// function greeting() {
-//   console.log("Clicked #2");
-// }
 
-// button.addEventListener("click", greeting)
+function findEven(arr){
+    for(let i=0; i< arr.length; i++){
+        if(arr[i] % 2 === 0){
+            console.log("OK")
+        } else{
+            console.log("NO")
+        }
+    }
+}
 
-// button.addEventListener("click", function () {
-//   console.log("Clicked #2");
-// })
-// button.addEventListener("click", function () {
-//   console.log("Clicked #3");
-// })
+let numbers = [2, 5, 9, 3, 8, 12]
 
-// button.onclick = function () {
-//   console.log("Clicked #1");
-// };
+numbers.map((num) => {
+    if(num % 2 === 0){
+        console.log("OK")
+    } else{
+        console.log("NO")
+    }
+})
 
-// button.onclick = function () {
-//   console.log("Clicked #2");
-// };
+// OK
+// NO
+
+*/
+
+/* Область видимости Scope */
+
+let a = "Zebra"
+
+function show(){
+    let a = "Saule"
+    console.log(a)
+}
+
+function sum(){
+    let a = "Penguin"
+}
+
+console.log(a)
+
