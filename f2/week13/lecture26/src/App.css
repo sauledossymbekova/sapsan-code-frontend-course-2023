@@ -1,0 +1,12 @@
+.App {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.App div {
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+}
