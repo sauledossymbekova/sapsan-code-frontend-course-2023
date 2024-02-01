@@ -1,23 +1,49 @@
 import "./App.css";
 import ProductCard from "./components/ProductCard";
 import { data } from "./data";
+import Container from "./components/Container";
 
 function App() {
-  console.log(data);
-
   return (
-    <div className="App">
-      {
-        data.map((element)=> <ProductCard title={element.title}/>)
-      }
-      <ProductCard cardUrl="https://www.greenwoodleather.com.au/cdn/shop/products/ST100160_3fe7c138-14e4-45f4-ac2c-6a61773db31e_2000x.jpg?v=1681747972"/>
-      <ProductCard cardUrl="https://www.greenwoodleather.com.au/cdn/shop/products/ST100160_3fe7c138-14e4-45f4-ac2c-6a61773db31e_2000x.jpg?v=1681747972"/>
-      <ProductCard cardUrl="https://www.greenwoodleather.com.au/cdn/shop/products/ST100160_3fe7c138-14e4-45f4-ac2c-6a61773db31e_2000x.jpg?v=1681747972"/>
-    </div>
+    <>
+      <Container>
+        {/* ProductList */}
+        {data.map((product) => (
+          <ProductCard
+            title={product.title}
+            description={product.description}
+            price={product.price}
+            imageUrl={product.image}
+            rating={product.rating}
+          />
+        ))}
+      </Container>
+
+      <Container>Hello Wordl!</Container>
+
+      <Container>
+        <img
+          width="200"
+          src="https://t4.ftcdn.net/jpg/05/62/99/31/360_F_562993122_e7pGkeY8yMfXJcRmclsoIjtOoVDDgIlh.jpg"
+        />
+        <img
+          width="200"
+          src="https://t4.ftcdn.net/jpg/05/62/99/31/360_F_562993122_e7pGkeY8yMfXJcRmclsoIjtOoVDDgIlh.jpg"
+        />
+        <img
+          width="200"
+          src="https://t4.ftcdn.net/jpg/05/62/99/31/360_F_562993122_e7pGkeY8yMfXJcRmclsoIjtOoVDDgIlh.jpg"
+        />
+      </Container>
+    </>
   );
 }
 
 export default App;
+
+
+
+// Задание div.app -> Container с children
 
 // props
 
@@ -27,7 +53,6 @@ export default App;
 
 // Задание создать компоненту Product Photo
 // в него должно передаваться пропсы юрл картинки и размер картинки
-
 
 // Задание взять данные с data.js
 // для кажлого элемента в data отрисовывать ProductCard
