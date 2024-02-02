@@ -1,18 +1,16 @@
 import ProductPhoto from "./ProductPhoto";
-import './ProductCard.css'
+import "./ProductCard.css";
 
-export default function ProductCard({image, title}) {
+export default function ProductCard(props) {
+  const { image, title, description, price, category } = props;
+
   return (
-    <div>
-      <ProductPhoto
-        url={image}
-        width="200"
-        height="200"
-        alt="рюкзак"
-      />
+    <div className="card">
+      <ProductPhoto url={image} alt="рюкзак" />
       <h5>{title}</h5>
-      <p>Краткая информация про продукт</p>
-      <h6>Цена тг</h6>
+      <p>{description}</p>
+      <h6>{price} тг</h6>
+      <p> Категория: {category}</p>
     </div>
   );
 }
