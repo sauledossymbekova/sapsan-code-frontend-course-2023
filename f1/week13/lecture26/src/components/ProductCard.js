@@ -1,7 +1,7 @@
 import ProductPhoto from "./ProductPhoto";
 
 export default function ProductCard(props) {
-  const {imageUrl, title, description, price, rating} = props
+  const { imageUrl, title, description, price, rating} = props
 
   return (
     <div>
