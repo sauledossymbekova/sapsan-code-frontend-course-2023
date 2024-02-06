@@ -31,6 +31,7 @@ function App() {
       <Container>
         <Product {...product1}/>
       </Container>
+
     </div>
   );
 }

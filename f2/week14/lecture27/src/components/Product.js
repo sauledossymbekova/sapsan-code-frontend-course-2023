@@ -5,6 +5,9 @@ export default function Product({ title, description, image, price }) {
       <h5> Название продукта: {title}</h5>
       <h5> Цена продукта: {price}</h5>
       <p> {description}</p>
+      <div style={{}}>
+
+      </div>
     </>
   );
 }
