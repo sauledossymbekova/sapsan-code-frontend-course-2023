@@ -12,22 +12,68 @@ function App() {
   );
 
   const jeweleryProducts = data.filter(
-    (product) => product.category === "jewelery"
+    (product) =>
+      product.category === "jewelery" || product.category === "electronics"
   );
 
+  const result = data.filter((product) => !(product.rating.count > 300));
+
+  console.log("render");
   return (
     <>
-      <h1>Ювелирные украшения</h1>
+       <h1>Ювелирные украшения</h1>
       <ProductList list={jeweleryProducts} />
       <h1>Одежда для мужчин</h1>
       <ProductList list={manProducts} />
-      <h1>Одежда для женщин</h1>
-      <ProductList list={womenProducts} />
+      {/*<h1>Одежда для женщин</h1>
+      <ProductList list={womenProducts} /> */}
     </>
   );
 }
 
 export default App;
+
+// 1 || 1 -> 1
+// 0 || 1 -> 1
+
+// 0 false, 1 true, 2 3 4 5 6 7 8 9 - true
+// "" false, "kajn" "a" - true
+
+// x(a+b) = xa +xb
+// xa+b
+
+// 1 0
+/* AND
+1 & 0 -> 0
+0 & 1 -> 0
+1 & 1 -> 1
+0 & 0 -> 0 */
+
+/* OR
+  1 | 0 -> 1
+  0 | 1 -> 1
+  1 | 1 -> 1
+  0 | 0 -> 0
+*/
+
+/* NOT
+!1 -> 0
+!0 -> 1 */
+
+/* NAND - NOT AND - 
+1 & 0 -> 0 + not -> 1
+0 & 1 -> 0 + not -> 1
+1 & 1 -> 1 + not -> 0
+0 & 0 -> 0 + not -> 1 */
+
+// NOR - NOT OR
+
+//XOR, NXOR
+
+// && - AND (чай и кофе)
+// || - OR (чай или кофе)
+
+// ! - NOT (чай)
 
 // показать списко электроник, дешевых вещей цена<50
 

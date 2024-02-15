@@ -10,3 +10,6 @@
 
 как сделать два условия: через логический оператор И AND - &&
 https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Logical_AND
+
+// count > 4
+// !(count <= 4)
