@@ -1,7 +1,9 @@
 import ProductPhoto from "./ProductPhoto";
 import "./ProductCard.css";
 
+
 export default function ProductCard(props) {
+  
   const { image, title, description, price, category } = props;
   const instock = true
   const productClassName = instock ?  'active' : 'notActive'
