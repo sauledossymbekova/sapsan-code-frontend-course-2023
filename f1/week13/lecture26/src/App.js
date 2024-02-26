@@ -1,32 +1,51 @@
 import "./App.css";
 import ProductList from "./components/ProductList";
 import { data } from "./data";
+import { useState } from "react";
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [user, setUser] = useState({ email: "", password: "" });
+
   const manProducts = data.filter(
     (product) => product.category === "men's clothing"
-  );
-
-  const womenProducts = data.filter(
-    (product) => product.category === "women's clothing"
   );
 
   const jeweleryProducts = data.filter(
     (product) =>
       product.category === "jewelery" || product.category === "electronics"
   );
-
-  const result = data.filter((product) => !(product.rating.count > 300));
+  const womenProducts = data.filter(
+    (product) => product.category === "women's clothing"
+  );
+  // const result = data.filter((product) => !(product.rating.count > 300));
 
   console.log("render");
   return (
     <>
-       <h1>Ювелирные украшения</h1>
-      <ProductList list={jeweleryProducts} />
-      <h1>Одежда для мужчин</h1>
-      <ProductList list={manProducts} />
-      {/*<h1>Одежда для женщин</h1>
-      <ProductList list={womenProducts} /> */}
+      {isLoggedIn ? (
+        <div>
+          <h1>Ювелирные украшения</h1>
+          <ProductList list={jeweleryProducts} />
+          <h1>Одежда для мужчин</h1>
+          <ProductList list={manProducts} />
+          {/*<h1>Одежда для женщин</h1>
+            <ProductList list={womenProducts} /> */}
+        </div>
+      ) : (
+        <div>
+          <label>
+            Email:
+            <input onChange={() => {}} />
+          </label>
+          <label>
+            Password:
+            <input onChange={() => {}} />
+          </label>
+
+          <button onClick={() => setIsLoggedIn(true)}>Войти</button>
+        </div>
+      )}
     </>
   );
 }

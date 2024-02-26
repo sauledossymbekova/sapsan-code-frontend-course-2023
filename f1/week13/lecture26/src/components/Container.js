@@ -1,10 +1,5 @@
-import './Container.css'
+import "./Container.css";
 
-export default function Container({children}){
-
-    return(
-        <div className='content'>
-            {children}
-        </div>
-    )
+export default function Container({ children }) {
+  return <div className="content">{children}</div>;
 }
