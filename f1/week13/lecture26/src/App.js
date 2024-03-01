@@ -11,22 +11,10 @@ function App() {
     (product) => product.category === "men's clothing"
   );
 
-  const jeweleryProducts = data.filter(
-    (product) =>
-      product.category === "jewelery" || product.category === "electronics"
-  );
-  const womenProducts = data.filter(
-    (product) => product.category === "women's clothing"
-  );
-  // const result = data.filter((product) => !(product.rating.count > 300));
-
-  console.log("render");
   return (
     <>
       {isLoggedIn ? (
         <div>
-          <h1>Ювелирные украшения</h1>
-          <ProductList list={jeweleryProducts} />
           <h1>Одежда для мужчин</h1>
           <ProductList list={manProducts} />
           {/*<h1>Одежда для женщин</h1>
@@ -42,7 +30,6 @@ function App() {
             Password:
             <input onChange={() => {}} />
           </label>
-
           <button onClick={() => setIsLoggedIn(true)}>Войти</button>
         </div>
       )}
