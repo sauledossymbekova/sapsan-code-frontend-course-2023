@@ -3,6 +3,7 @@ import { data } from "./data";
 import ProductList from "./components/ProductList";
 
 function App() {
+  const [products, setProducts] = useState()
   const filteredList = data.filter(
     (product) => product.category === "men's clothing"
   );
@@ -15,6 +16,8 @@ function App() {
 
   return (
     <>
+
+
       <h1>Дешевые вещи:</h1>
       <ProductList list={cheapProducts} />
 
