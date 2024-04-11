@@ -15,7 +15,7 @@ function App() {
           <Route path="/news/:newsId" element={<DetailedNewsPage />} />
         </Route>
 
-        <Route path="/event" element={<></>} />
+        <Route path="/event" element={<>Hello World!</>} />
       </Routes>
     </BrowserRouter>
   );
